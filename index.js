@@ -13,11 +13,11 @@ fs.createReadStream(csvFilePath)
   .on('data', function(row) {
     row.tags = _.filter(row.tags.split(tagSep), tag => tag.includes(filterFor))
     row.tags.forEach(tag => {
-      const {tags, ...props} = row
+      const {email} = row
       const trimmedTag = _.trim(tag)
       //each tag will get its own csv output, so add it to the hash
       filesToBuild[trimmedTag] = filesToBuild[trimmedTag] || []
-      filesToBuild[trimmedTag].push({...props})
+      filesToBuild[trimmedTag].push({email})
     })
   })
   .on('end', function() {
