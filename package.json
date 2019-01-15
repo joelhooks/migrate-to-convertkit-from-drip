@@ -1,0 +1,16 @@
+{
+  "name": "parse_drip",
+  "version": "1.0.0",
+  "description": "",
+  "main": "drip_to_convertkit.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parser": "^2.1.0",
+    "fast-csv": "^2.4.1",
+    "lodash": "^4.17.11"
+  }
+}
